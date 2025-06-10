@@ -1,0 +1,3 @@
+D:/Red & White Sahil/C Programming/Basic array/cmake-build-debug/CMakeFiles/Basic_array.dir
+D:/Red & White Sahil/C Programming/Basic array/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Red & White Sahil/C Programming/Basic array/cmake-build-debug/CMakeFiles/rebuild_cache.dir

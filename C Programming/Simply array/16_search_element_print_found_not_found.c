@@ -10,7 +10,7 @@ int main()
     printf("Enter a number which is you are finding : ");
     scanf("%d", &num);
 
-    for (int i = 0; i < 10; i++)
+    for(int i = 0; i < 10; i++)
     {
         printf("%d ", arr[i]);
          if (arr[i] == num)

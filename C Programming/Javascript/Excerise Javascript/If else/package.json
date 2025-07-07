@@ -1,0 +1,14 @@
+{
+  "name": "if-else",
+  "version": "1.0.0",
+  "main": "1_find_maximum_between_two_numbers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}

@@ -1,0 +1,1 @@
+// Accept a value and find power of a number using for loop.

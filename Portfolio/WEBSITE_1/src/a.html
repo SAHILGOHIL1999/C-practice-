@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap-only Hero</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Minimal extra styling for visual effects (not Bootstrap utilities) */
+    body {
+      background-color: #071017; /* deep dark */
+      color: #e6eef6;
+      min-height: 100vh;
+    }
+
+    /* subtle spotlight in center */
+    .spotlight {
+      position: absolute;
+      left: 50%;
+      top: 22%;
+      width: 36rem;
+      height: 36rem;
+      transform: translateX(-50%) rotate(-12deg);
+      background: radial-gradient(circle at 30% 30%, rgba(20,140,220,0.18), transparent 30%),
+                  radial-gradient(circle at 70% 70%, rgba(30,100,180,0.06), transparent 40%);
+      filter: blur(10px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* large outlined background word */
+    .bg-outline {
+      font-weight: 800;
+      font-size: clamp(4rem, 12vw, 12rem);
+      line-height: 0.9;
+      color: transparent;
+      -webkit-text-stroke: 2.5px rgba(255,255,255,0.12);
+      text-transform: none;
+      z-index: 0;
+      white-space: nowrap;
+    }
+
+    /* profile image circle overlap */
+    .profile-img {
+      width: clamp(160px, 24vw, 420px);
+      height: auto;
+      border-radius: 0.75rem;
+      z-index: 2;
+      transform: translateY(10%);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+    }
+
+    /* vertical side badge */
+    .side-badge {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      background: rgba(255,255,255,0.06);
+      color: #dbefff;
+      padding: .6rem .5rem;
+      border-radius: .25rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* small decorative dots */
+    .dot {
+      width: .42rem;
+      height: .42rem;
+      border-radius: 50%;
+      background: #2aa7ff;
+      display: inline-block;
+    }
+
+    /* messenger floating button */
+    .messenger-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #1e9bff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    /* navbar thin underline */
+    .nav-underline {
+      border-top: 1px solid rgba(255,255,255,0.03);
+    }
+
+    @media (max-width: 767.98px){
+      .spotlight { display: none; }
+      .bg-outline { font-size: clamp(3rem, 24vw, 8rem); -webkit-text-stroke: 1.8px rgba(255,255,255,0.10); }
+      .profile-img { transform: translateY(4%); width: clamp(140px, 40vw, 260px); }
+    }
+  </style>
+</head>
+<body class="position-relative">
+
+  <!-- Spotlight effect -->
+  <div class="spotlight"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <div class="me-2 bg-primary rounded-2" style="width:36px;height:28px;"></div>
+        <span class="fw-semibold" style="color:#29b6ff">Vir<span style="color:#8ee1ff">T</span>uo</span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active px-3" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- social mock icons -->
+      <div class="d-none d-lg-flex align-items-center gap-2">
+        <div class="rounded-circle bg-white bg-opacity-5 d-flex align-items-center justify-content-center" style="width:44px;height:44px;">f</div>
+        <div class="rounded-circle bg-white bg-opacity-5 d-flex align-items-center justify-content-center" style="width:44px;height:44px;">x</div>
+        <div class="rounded-circle bg-white bg-opacity-5 d-flex align-items-center justify-content-center" style="width:44px;height:44px;">p</div>
+        <div class="rounded-circle bg-white bg-opacity-5 d-flex align-items-center justify-content-center" style="width:44px;height:44px;">i</div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container nav-underline"></div>
+
+  <!-- HERO -->
+  <header class="container py-5 position-relative" style="z-index:1;">
+    <div class="row align-items-center" style="min-height:70vh;">
+      <div class="col-12 text-center">
+
+        <!-- top small intro -->
+        <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+          <div style="font-size:2.3rem;">👋</div>
+          <h2 class="h1 fw-light m-0">My <span class="fw-semibold">name is John Lee</span> a freelancer</h2>
+        </div>
+
+        <!-- decorative small dots -->
+        <div class="mb-3">
+          <span class="dot me-2"></span>
+          <span class="dot me-2" style="opacity:.6;width:.32rem;height:.32rem;background:#8ebfff"></span>
+          <span class="dot me-2" style="opacity:.5;width:.22rem;height:.22rem;background:#cfefff"></span>
+        </div>
+
+        <!-- big outlined background word -->
+        <div class="position-relative d-flex justify-content-center align-items-center">
+          <div class="bg-outline position-absolute">Photographer</div>
+
+          <!-- profile image sits above the big word -->
+          <img src="/mnt/data/4544cab7-7daa-4914-b515-7be78bb076e8.png"
+               alt="profile"
+               class="profile-img mx-auto d-block position-relative" />
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- vertical side badge (right) -->
+  <div class="position-fixed end-0 top-50 translate-middle-y me-3 d-none d-md-block" style="z-index:3;">
+    <div class="side-badge">34+ PRE-BUILT SITES</div>
+  </div>
+
+  <!-- messenger floating button bottom-left -->
+  <div class="position-fixed start-0 bottom-0 m-4" style="z-index:5;">
+    <div class="messenger-btn">
+      <!-- simple icon letter -->
+      <span class="text-white fw-bold">💬</span>
+    </div>
+  </div>
+
+  <!-- small footer spacer -->
+  <div style="height:6rem;"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
